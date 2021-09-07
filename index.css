@@ -1,0 +1,203 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;        
+    font-family: var(--red-hat-ff);
+    font-size: var(--medium-fs);
+}
+::-moz-focus-inner, ::-moz-focus-outer
+{
+    border: none;
+}
+:root
+{
+    /* Colors */
+    /** Primary  **/
+    --pr-cr1: hsl(225, 100%, 94%);
+    --pr-cr2: hsl(245, 75%, 52%);
+    /** Neutral **/    
+    --ne-cr1:  hsl(225, 100%, 98%);
+    --ne-cr2:  hsl(224, 23%, 55%);
+    --ne-cr3:  hsl(223, 47%, 23%);
+
+    /* Font Families */
+    --red-hat-ff: 'Red Hat Display', sans-serif;
+
+    /* Font Weights */
+    --medium-fw: 500;
+    --bold-fw: 700;
+    --black-fw: 900;
+
+    /* Font-Sizes */
+    --medium-fs: 16px;
+
+    /* Paddings */
+    --main-pg: 50px;
+    --sec-pg: 20px;
+
+    /* Border Radiuses */
+    --main-br: 10px;
+}
+html
+{
+    min-height: 100vh;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+body
+{
+    height: 100%;
+    background-image: url("./images/pattern-background-desktop.png");
+    background-color: var(--pr-cr1);
+    background-size: contain;
+    background-repeat: no-repeat;    
+    padding: var(--main-pg);
+}
+#card-container
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    border-radius: var(--main-br);
+    overflow: auto;
+    gap: 30px;    
+    background-color: white;
+    box-shadow: 0 0 30px 5px #00000010;
+}
+#top-container
+{
+
+}
+#top-container svg
+{
+    object-fit: cover;
+    object-position: center;
+}
+#bottom-container
+{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 var(--main-pg);
+}
+#details-container
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+#details-container span
+{
+    font-weight: var(--black-fw);
+    font-size: 30px;
+    color: var(--ne-cr3);
+}
+#details-container p
+{
+    color: var(--ne-cr2);
+}
+.item-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--ne-cr1);
+    padding: var(--sec-pg);
+    border-radius: var(--main-br);
+}
+.item-left
+{
+    display: flex;
+    gap: 15px;
+}
+.item-container svg
+{
+
+}
+.item-details
+{
+
+}
+.item-details span
+{
+    font-weight: var(--bold-fw);
+}
+.item-container p
+{
+    color: var(--ne-cr2);
+}
+.item-container a
+{
+    text-decoration: underline;
+}
+#controls-container
+{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#order-btn, #cancel-btn
+{
+    height: 50px;
+    border-radius: var(--main-br);    
+    font-weight: var(--bold-fw);
+    cursor: pointer;
+    transition: .3s;
+}
+#order-btn
+{
+    background-color: var(--pr-cr2);
+    color: white;    
+    border: none;
+    box-shadow: 0 5px 20px 0 hsl(245, 75%, 52%, 40%);    
+}
+#order-btn:hover
+{
+    opacity: 0.5;
+}
+#cancel-btn
+{
+    color: var(--pr-cr2);
+    background: none;
+    border: none;
+}
+#cancel-btn:hover
+{
+    color: var(--ne-cr3);
+}
+@media screen and (max-width: 580px) 
+{
+    body
+    {
+        background-image: url("./images/pattern-background-mobile.png");
+    }    
+    #card-container
+    {
+        max-width: 330px;
+    }
+    #top-container svg
+    {
+        width: 330px;
+    }
+    :root
+    {
+        --main-pg: 20px;
+    }
+}
+@media screen and (max-width: 400px) 
+{
+    #card-container
+    {
+        max-width: 280px;
+    }
+    #top-container svg
+    {
+        width: 280px;
+    }    
+}
