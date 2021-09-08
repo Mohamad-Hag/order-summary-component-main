@@ -43,19 +43,21 @@
 }
 html
 {
-    min-height: 100vh;
-    display: flex;    
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;    
 }
 body
 {
     height: 100%;
+    width: 100%;
     background-image: url("./images/pattern-background-desktop.png");
     background-color: var(--pr-cr1);
     background-size: contain;
     background-repeat: no-repeat;    
     padding: var(--main-pg);
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 #card-container
 {
@@ -135,6 +137,15 @@ body
 {
     text-decoration: underline;
 }
+.item-container a:active
+{
+    color: inherit;
+}
+.item-container a:hover
+{
+    text-decoration: none;
+    opacity: 0.5;
+}
 #controls-container
 {
     padding: 30px;
@@ -179,25 +190,22 @@ body
     }    
     #card-container
     {
-        max-width: 330px;
+        width: 95%;
+    }        
+    #details-container span
+    {
+        font-size: 25px;
+    }
+    #details-container p, #controls-container *, .item-container *
+    {
+        font-size: 14px;
     }
     #top-container svg
     {
-        width: 330px;
+        width: 100%;
     }
     :root
     {
         --main-pg: 20px;
     }
-}
-@media screen and (max-width: 400px) 
-{
-    #card-container
-    {
-        max-width: 280px;
-    }
-    #top-container svg
-    {
-        width: 280px;
-    }    
 }
