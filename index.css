@@ -190,7 +190,7 @@ body
     }    
     #card-container
     {
-        width: 95%;
+        width: 100%;
     }        
     #details-container span
     {
@@ -206,6 +206,6 @@ body
     }
     :root
     {
-        --main-pg: 20px;
+        --main-pg: 10px;
     }
 }
